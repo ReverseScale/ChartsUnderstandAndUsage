@@ -131,7 +131,7 @@ extension LineChartVC{
          //limitLine1.drawLabelEnabled = false //不绘制文字
         limitLine1.valueTextColor = UIColor.blue  //文字颜色
         limitLine1.valueFont = UIFont.systemFont(ofSize: 13)  //文字大小
-        limitLine1.labelPosition = .leftTop //文字位置
+        limitLine1.labelPosition = .topLeft //文字位置
         /*.leftTop：左上
          .leftBottom：左下
          .rightTop：右上（默认）
@@ -160,7 +160,7 @@ extension LineChartVC{
             circleColors.append(ZHFColor.blue)
         }
         //设置折线
-        let chartDataSet1 = LineChartDataSet(values: dataEntries1, label: "张三")
+        let chartDataSet1 = LineChartDataSet(entries: dataEntries1, label: "张三")
         chartDataSet1.setColors(ZHFColor.zhf_randomColor(),ZHFColor.zhf_randomColor())//设置折线颜色(是一个循环，例如：你设置5个颜色，你设置8条折线，后三个对应的颜色是该设置中的前三个，依次类推)
         //  chartDataSet1.setColors(ChartColorTemplates.material(), alpha: 1)
         //chartDataSet1.setColor(ZHFColor.gray)//颜色一致
@@ -208,7 +208,7 @@ extension LineChartVC{
             dataEntries2.append(entry)
             
         }
-        let chartDataSet2 = LineChartDataSet(values: dataEntries2, label: "李四")
+        let chartDataSet2 = LineChartDataSet(entries: dataEntries2, label: "李四")
         //chartDataSet2.setColors(ZHFColor.gray,ZHFColor.green,ZHFColor.yellow,ZHFColor.zhf_randomColor(),ZHFColor.zhf_randomColor())//设置折线颜色(是一个循环，例如：你设置5个颜色，你设置8条折线，后三个对应的颜色是该设置中的前三个，依次类推)
         //  chartDataSet2.setColors(ChartColorTemplates.material(), alpha: 1)
         chartDataSet2.setColor(ZHFColor.gray)//颜色一致
@@ -227,7 +227,7 @@ extension LineChartVC: ChartViewDelegate{
         //将选中的数据点的颜色改成黄色
         var chartDataSet = LineChartDataSet()
         chartDataSet = (chartView.data?.dataSets[0] as? LineChartDataSet)!
-        let values = chartDataSet.values
+        let values = chartDataSet.entries
         let index = values.index(where: {$0.x == highlight.x})  //获取索引
         chartDataSet.circleColors = circleColors //还原
         chartDataSet.circleColors[index!] = .orange

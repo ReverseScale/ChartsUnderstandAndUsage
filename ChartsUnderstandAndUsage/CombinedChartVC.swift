@@ -103,7 +103,7 @@ extension CombinedChartVC{
             dataEntries1.append(entry)
         }
         //这10条数据作为柱状图的所有数据
-        let chartDataSet1 = BarChartDataSet(values: dataEntries1, label: "柱状图1")
+        let chartDataSet1 = BarChartDataSet(entries: dataEntries1, label: "柱状图1")
         chartDataSet1.valueFont = UIFont.systemFont(ofSize: 10)
         chartDataSet1.colors = [.orange] //使用橙色
         chartDataSet1.axisDependency = .left //依赖左侧轴
@@ -118,7 +118,7 @@ extension CombinedChartVC{
             dataEntries2.append(entry)
         }
         //这10条数据作为柱状图的所有数据
-        let chartDataSet2 = BarChartDataSet(values: dataEntries2, label: "柱状图2")
+        let chartDataSet2 = BarChartDataSet(entries: dataEntries2, label: "柱状图2")
         chartDataSet2.stackLabels = ["Stack 1", "Stack 2"]
         chartDataSet2.valueFont = UIFont.systemFont(ofSize: 10)
         chartDataSet2.colors = [.red,.orange] //使用红色
@@ -145,7 +145,7 @@ extension CombinedChartVC{
             dataEntries.append(entry)
         }
         //这10条数据作为折线图的所有数据
-        let chartDataSet = LineChartDataSet(values: dataEntries, label: "折线图")
+        let chartDataSet = LineChartDataSet(entries: dataEntries, label: "折线图")
         chartDataSet.setColor(ZHFColor.zhf_randomColor())//折线颜色
         chartDataSet.lineWidth = 2.5
         chartDataSet.setCircleColor(ZHFColor.red)
@@ -173,7 +173,7 @@ extension CombinedChartVC{
             let val = Double(arc4random_uniform(100) + 150)
             return ChartDataEntry(x: Double(i), y: val)
         }
-        let chartDataSet = ScatterChartDataSet(values: dataEntries, label: "散点图")
+        let chartDataSet = ScatterChartDataSet(entries: dataEntries, label: "散点图")
         chartDataSet.colors = [ChartColorTemplates.material()[0]]
         chartDataSet.scatterShapeSize = 8 //(默认是10)
         chartDataSet.drawValuesEnabled = false
@@ -190,7 +190,7 @@ extension CombinedChartVC{
             let size = CGFloat(arc4random_uniform(10))
             return BubbleChartDataEntry(x: Double(i), y: val, size: size)
         }
-        let chartDataSet = BubbleChartDataSet(values: dataEntries, label: "气泡图")
+        let chartDataSet = BubbleChartDataSet(entries: dataEntries, label: "气泡图")
         chartDataSet.colors = [ChartColorTemplates.material()[1]]
         chartDataSet.valueTextColor = .white
         chartDataSet.valueFont = .systemFont(ofSize: 10)
@@ -215,7 +215,7 @@ extension CombinedChartVC{
                                         open: even ? val + open : val - open,
                                         close: even ? val - close : val + close)
         }
-        let chartDataSet = CandleChartDataSet(values: dataEntries, label: "烛形图")
+        let chartDataSet = CandleChartDataSet(entries: dataEntries, label: "烛形图")
         chartDataSet.setColor(ChartColorTemplates.material()[2])
         chartDataSet.shadowColor = .darkGray //柱线（烛心线）颜色
         chartDataSet.decreasingColor = ZHFColor.green //实心颜色

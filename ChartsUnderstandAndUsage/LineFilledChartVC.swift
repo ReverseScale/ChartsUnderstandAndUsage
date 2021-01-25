@@ -69,7 +69,7 @@ class LineFilledChartVC: BaseVC {
                 let entry = ChartDataEntry.init(x: Double(i), y: Double(y))
                 dataEntries1.append(entry)
             }
-            let chartDataSet1 = LineChartDataSet(values: dataEntries1, label: "上折线")
+            let chartDataSet1 = LineChartDataSet(entries: dataEntries1, label: "上折线")
             //chartDataSet1.setColors(ZHFColor.gray,ZHFColor.green,ZHFColor.yellow,ZHFColor.zhf_randomColor(),ZHFColor.zhf_randomColor())//设置折线颜色(是一个循环，例如：你设置5个颜色，你设置8条折线，后三个对应的颜色是该设置中的前三个，依次类推)
             //  chartDataSet1.setColors(ChartColorTemplates.material(), alpha: 1)
             chartDataSet1.setColor(ZHFColor.gray)//颜色一致
@@ -97,7 +97,7 @@ class LineFilledChartVC: BaseVC {
                 let entry = ChartDataEntry.init(x: Double(i), y: Double(y))
                 dataEntries2.append(entry)
             }
-            let chartDataSet2 = LineChartDataSet(values: dataEntries2, label: "下折线")
+            let chartDataSet2 = LineChartDataSet(entries: dataEntries2, label: "下折线")
             //chartDataSet2.setColors(ZHFColor.gray,ZHFColor.green,ZHFColor.yellow,ZHFColor.zhf_randomColor(),ZHFColor.zhf_randomColor())//设置折线颜色(是一个循环，例如：你设置5个颜色，你设置8条折线，后三个对应的颜色是该设置中的前三个，依次类推)
             //  chartDataSet2.setColors(ChartColorTemplates.material(), alpha: 1)
             chartDataSet2.setColor(ZHFColor.green)//颜色一致

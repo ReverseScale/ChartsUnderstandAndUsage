@@ -99,7 +99,7 @@ class BarChartWaveVC: BaseVC {
             BarChartDataEntry(x: Double($0), y: sin(.pi * Double($0%128) / 64))
         }
         
-        let set = BarChartDataSet(values: entries, label: "信息")
+        let set = BarChartDataSet(entries: entries, label: "信息")
         set.setColor(UIColor(red: 240/255, green: 120/255, blue: 123/255, alpha: 1))
         
         let data = BarChartData(dataSet: set)

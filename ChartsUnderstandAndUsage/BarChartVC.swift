@@ -93,7 +93,7 @@ class BarChartVC: BaseVC {
         limitLine.lineWidth = 2
         limitLine.lineColor = ZHFColor.green
         limitLine.lineDashLengths = [5.0, 2.0]
-        limitLine.labelPosition = ChartLimitLine.LabelPosition.rightTop//位置
+        limitLine.labelPosition = ChartLimitLine.LabelPosition.topRight//位置
         limitLine.valueTextColor = ZHFColor.zhf66_contentTextColor
         limitLine.valueFont = UIFont.systemFont(ofSize: 12)
         leftAxis.addLimitLine(limitLine)
@@ -135,7 +135,7 @@ class BarChartVC: BaseVC {
             yVals.add(entry)
         }
          //创建BarChartDataSet对象，其中包含有Y轴数据信息，以及可以设置柱形样式
-        let set1: BarChartDataSet = BarChartDataSet.init(values: yVals as? [ChartDataEntry], label: "信息")
+        let set1: BarChartDataSet = BarChartDataSet.init(entries: yVals as? [ChartDataEntry], label: "信息")
         set1.barBorderWidth = 0.2 //边线宽
         set1.drawValuesEnabled = true //是否在柱形图上面显示数值
         set1.highlightEnabled = true //点击选中柱形图是否有高亮效果，（单击空白处取消选中）

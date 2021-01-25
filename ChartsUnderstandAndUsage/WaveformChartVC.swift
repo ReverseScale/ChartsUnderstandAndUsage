@@ -156,7 +156,7 @@ class WaveformChartVC: BaseVC {
                 dataEntries1.append(entry1)
                 dataEntries1.append(entry2)
                 dataEntries1.append(entry3)
-                let chartDataSet1 = LineChartDataSet(values: dataEntries1, label: labelStr1)
+                let chartDataSet1 = LineChartDataSet(entries: dataEntries1, label: labelStr1)
                 chartDataSet1.mode = .horizontalBezier //(.line、.cubicBezier、.horizontalBezier、.stepped)
                 chartDataSet1.setColor(labelColor1)
                 chartDataSet1.lineWidth = 0

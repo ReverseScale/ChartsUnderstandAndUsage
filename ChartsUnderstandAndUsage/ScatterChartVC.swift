@@ -70,7 +70,7 @@ extension ScatterChartVC{
             let val = Double(arc4random_uniform(20) )
             return ChartDataEntry(x: Double(i), y: val)
         }
-        let chartDataSet1 = ScatterChartDataSet(values: dataEntries1, label: "图例1")
+        let chartDataSet1 = ScatterChartDataSet(entries: dataEntries1, label: "图例1")
         chartDataSet1.setScatterShape(.circle) //使用圆形散点(三角形：.triangle 十字：.cross 叉：.x 上箭头：.chevronUp  下箭头：.chevronDown)
         chartDataSet1.setColor(.yellow)
         chartDataSet1.scatterShapeSize = 10 //散点大小
@@ -82,7 +82,7 @@ extension ScatterChartVC{
             let val = Double(arc4random_uniform(20) + 20)
             return ChartDataEntry(x: Double(i), y: val)
         }
-        let chartDataSet2 = ScatterChartDataSet(values: dataEntries2, label: "图例2")
+        let chartDataSet2 = ScatterChartDataSet(entries: dataEntries2, label: "图例2")
         chartDataSet2.setColor(.red)
         chartDataSet2.scatterShapeSize = 10 //散点大小
         chartDataSet2.scatterShapeHoleRadius = 2.5 //内点大小
@@ -92,7 +92,7 @@ extension ScatterChartVC{
             let val = Double(arc4random_uniform(20) + 40)
             return ChartDataEntry(x: Double(i), y: val)
         }
-        let chartDataSet3 = ScatterChartDataSet(values: dataEntries3, label: "图例3")
+        let chartDataSet3 = ScatterChartDataSet(entries: dataEntries3, label: "图例3")
         chartDataSet3.setScatterShape(.x)//使用圆形散点(三角形：.triangle 十字：.cross 叉：.x 上箭头：.chevronUp  下箭头：.chevronDown)
         chartDataSet3.setColor(.green)
         //目前散点图包括2组数据

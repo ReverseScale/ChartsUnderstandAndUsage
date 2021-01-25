@@ -90,7 +90,7 @@ extension CandleStickChartVC{
                                         close: even ? val - close : val + close)
             }
         }
-        let chartDataSet1 = CandleChartDataSet(values: dataEntries1, label: "图例1")
+        let chartDataSet1 = CandleChartDataSet(entries: dataEntries1, label: "图例1")
         chartDataSet1.shadowWidth = 2 //柱线（烛心线）颜色
         chartDataSet1.decreasingFilled = false //开盘高于收盘则使用空心矩形
         chartDataSet1.increasingFilled = true //开盘低于收盘则使用实心矩形

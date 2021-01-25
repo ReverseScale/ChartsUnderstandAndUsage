@@ -98,7 +98,7 @@ class RadarChartVC: BaseVC {
             yVals.add(entry)
         }
         //创建RadarChartDataSet对象，其中包含有Y轴数据信息
-        let set1: RadarChartDataSet = RadarChartDataSet.init(values: yVals as? [ChartDataEntry], label: "雷达星座运势图")
+        let set1: RadarChartDataSet = RadarChartDataSet.init(entries: yVals as? [ChartDataEntry], label: "雷达星座运势图")
         set1.lineWidth = 0.5 //数据折线线宽
         set1.setColor(ZHFColor.gray)//颜色
         set1.drawFilledEnabled = true ////是否填充颜色

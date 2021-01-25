@@ -77,7 +77,7 @@ extension BubbleChartVC{
                 return BubbleChartDataEntry(x: Double(i), y: val, size: size)
             }
         }
-        let chartDataSet1 = BubbleChartDataSet(values: dataEntries1, label: "气泡1")
+        let chartDataSet1 = BubbleChartDataSet(entries: dataEntries1, label: "气泡1")
         chartDataSet1.highlightCircleWidth = 6 //气泡选中时的边框宽
         chartDataSet1.iconsOffset = CGPoint(x: 10, y: -10) //修改气泡上的图片位置（默认居中）
         chartDataSet1.drawValuesEnabled = true
@@ -95,7 +95,7 @@ extension BubbleChartVC{
                 return BubbleChartDataEntry(x: Double(i), y: val, size: size)
             }
         }
-        let chartDataSet2 = BubbleChartDataSet(values: dataEntries2, label: "气泡2")
+        let chartDataSet2 = BubbleChartDataSet(entries: dataEntries2, label: "气泡2")
         chartDataSet2.setColor(.orange) //第二组气泡使用橙色
         
         //目前气泡图包括2组数据

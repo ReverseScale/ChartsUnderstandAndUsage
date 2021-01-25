@@ -86,7 +86,7 @@ class PieChartVC: BaseVC {
             yVals.add(entry)
         }
         //创建PieChartDataSet对象
-        let set1: PieChartDataSet = PieChartDataSet.init(values: yVals as? [ChartDataEntry], label: "饼状图")
+        let set1: PieChartDataSet = PieChartDataSet.init(entries: yVals as? [ChartDataEntry], label: "饼状图")
         set1.drawIconsEnabled = false //是否在饼状图上面显示图片
         set1.sliceSpace = 2 //相邻区块之间的间距
         set1.selectionShift = 8//选中区块时, 放大的半径
